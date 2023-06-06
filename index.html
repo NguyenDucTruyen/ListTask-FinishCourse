@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+</head>
+<body>
+    <div id="area">
+        <div class="header">
+            <div class="logo">
+                <img src="./assets/img/task.png" alt="">
+                <div class="slogan"><span>Let's get shit done! <img src="./assets/img/peace.png" alt=""></span></div>
+            </div>
+            <div class="newTask">
+                <span><i class="fa-solid fa-plus"></i> New task</span>
+            </div>
+        </div>
+        <div class="main">
+            <!-- To do col -->
+            <div class="col-3">
+                <div class="duty__header todo-col">
+                    <span class="duty__title">Todo</span>
+                    <span class="duty__count">3</span>
+                </div>
+
+                <div class="todo__container duty__container">
+               
+                </div>
+
+            </div>
+            <!-- Doing col -->
+            <div class="col-3">
+                <div class="duty__header doing-col">
+                    <span class="duty__title">Doing</span>
+                    <span class="duty__count">3</span>
+                </div>
+                <div class="doing__container duty__container">
+                    
+                </div>
+            </div>
+            <!-- Done col -->
+            <div class="col-3">
+                <div class="duty__header done-col">
+                    <span class="duty__title">Done</span>
+                    <span class="duty__count">3</span>
+                </div>
+                <div class="done__container duty__container">
+
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="toast toast-edit">
+        <form action="" id="formEdit">
+            <i class="fa-solid fa-x toast-close"></i>
+            <label for="" class="form-label">Edit todo</label>
+            <input type="text" name="categoryEditBox" class="form-category">
+            <input type="text" name="titleEditBox" class="form-title">
+            <textarea class="form-textare" name="contentEditBox" id="" cols="30" rows="10"></textarea>
+            <div class="status">
+                <div class="radio-group">
+                    <input type="radio" name="status" id="todo">
+                    <label for="todo">Todo</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="status" id="doing">
+                    <label for="doing">Doing</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="status" id="done">
+                    <label for="done">Done</label>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+            
+        </form>
+    </div>
+    <div class="toast toast-add" >
+        <form action="" id="formAdd">
+            <i class="fa-solid fa-x toast-close"></i>
+            <label for="" class="form-label">Add new todo</label>
+            <input type="text" class="form-category" name="categoryAddBox" placeholder="Category">
+            <input type="text" class="form-title" name="titleAddBox" placeholder="Title">
+            <textarea class="form-textare" name="contentAddBox" id="" cols="30" rows="10" placeholder="Content"></textarea>
+           
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <script src="./assets/mainjs.js" ></script>
+    <script>
+        Validator("#formAdd")
+    </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f5f5f5;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+#area{
+    max-width: 1280px;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+/* Header css */
+.header{
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.logo>img {
+    width: 172px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+.slogan span{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    
+}
+.slogan img{
+    width: 20px;
+    object-fit: cover;
+}
+.newTask{
+    align-self: flex-end;
+    padding: 8px;
+    cursor: pointer;
+}
+.newTask i{
+    width: 20px;
+}
+/* End Header css */
+
+/* Main css */
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.col-3{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.duty__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddd;
+    color: #fff;
+    padding: 8px;
+    height: 30px;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 26px;
+}
+.duty__container{
+    max-height: 80vh;
+    box-sizing: border-box;
+    /* padding-bottom: 30px; */
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.duty__container::-webkit-scrollbar{
+    width: 6px;
+}
+.duty__container::-webkit-scrollbar-thumb{
+    background-color: #8f8f8f;
+    border-radius: 100px;
+}
+.duty__count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    height: 20px;
+    width: 20px;
+    padding: 8px;
+    border-radius: 5px;
+}
+.duty__header::after{
+    content:'';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ddd;
+}
+.task-box{
+    margin-top: 20px;
+    padding:8px 14px;
+    padding-bottom: 20px;
+    position: relative;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: solid 2px rgba(90, 92, 99,0.1);
+    border-top: none;
+    box-shadow: 0px 4px 3px #888;
+
+}
+.task__header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #333;
+}
+.heading{
+    width: 70%;
+    padding-bottom: 24px;    
+    border-bottom: solid 2px #333;
+}
+.interact{
+    width: 25%;
+    text-align: right;
+    min-width: 60px;
+}
+.interact i{
+    cursor: pointer;
+    padding: 6px;
+}
+.category{
+    color: rgb(59, 172, 242);
+    font-size: 14px;
+    font-weight: 400;
+    
+    display: block;
+    margin-bottom: 4px;
+}
+.content,.dayCreate{
+    display: inline-block;
+    padding-top: 10px;
+    color: #5A5C63;
+    font-size: 12px;
+    width: 100%;
+    line-height: 1.6;
+}
+.dayCreate i{
+    width: 16px;
+}
+.todo-col {
+    background-color: #00A6DA;
+}
+.todo-col .duty__count{
+    background-color: #00CDDA;
+}
+.todo-col.duty__header::after{
+    background-color: #00A6DA;
+}
+
+.doing-col {
+    background-color: rgba(204, 172, 3, 0.561)
+}
+.doing-col .duty__count{
+    background-color: #DAB700;
+}
+.doing-col.duty__header::after{
+    background-color: rgba(204, 172, 3, 0.561);
+}
+
+.done-col {
+    background-color: #3BC057;
+}
+.done-col .duty__count{
+    background-color: #69CE7E;
+}
+.done-col.duty__header::after{
+    background-color: #3BC057;
+}
+
+/* Toast */
+.toast{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding: 8px;
+    border-radius: 5px;
+    width: 600px;
+    color: #5A5C63;
+    position: relative;
+    margin: auto 20px;
+}
+.form-label{
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 12px 0;
+}
+form input[type="text"],form textarea{
+    margin-top: 8px;
+    width: 100%;
+    resize: none;
+    border:1px solid #888;
+    border-radius: 3px;
+    padding: 4px;
+}
+form input[type="submit"]{
+    margin-top: 12px;
+    padding: 4px ;
+}
+.status{
+    display: flex;
+    width: 60%;
+    margin: 12px  auto 0;
+    justify-content: space-evenly;
+}
+.toast-close{
+    position: absolute;
+    padding: 5px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.toast-edit{
+    display: none;
+}
+.toast-add{
+    display: none;
+}
+.valid{
+    border-color: #3BC057 !important;
+}
+.error{
+    border-color: rgb(253, 72, 72) !important ;
+}
